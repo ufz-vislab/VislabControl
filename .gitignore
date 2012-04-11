@@ -1,2 +1,6 @@
 docs/
-tmp/restart.txt
+tmp/always_restart.txt
+*.log
+vendor/
+.bundle/
+config/config.yml

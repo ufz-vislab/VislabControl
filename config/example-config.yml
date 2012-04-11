@@ -1,0 +1,34 @@
+nodes: [1, 2, 3]       # node ips
+nodes_ip_offset: 100   # + offset
+subnet: xxx.xxx.xxx    # in subnet
+
+node_sets:
+    - name:  All       # A nodeset which can be controlled at once
+      nodes: [1, 2, 3] # ips of the nodes
+
+    - name:  Part
+      nodes: [2, 3]
+
+
+vred_versions:         # The VRED versions to switch to
+    - name:   2.5
+      path:   C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\VREC\\vred 2.5\\Install
+      arch:   WIN32
+
+    - name:   5.04-x64
+      path:   C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PI-VR\\vred 5.04-x64\\Install
+      arch:   WIN64
+
+tracking:              # AR-Tracking server Remote cotrol
+    ip:      xxx.xxx.xxx.xxx
+    port:    5001
+    configs: ['Sync', 'NoSync']
+
+ipmi:                     # uses the same ips as the node
+    user:    IPMI_USER
+    pw:      IPMI_USER_PW
+    subnet:  xxx.xxx.xxx  # but in a different subnet
+    ip_offset: 200        # and with a different offset
+
+ssh:                      # to switch VRED versions
+    user:    ssh_user

@@ -3,7 +3,7 @@
 	[
 		{
 			"path": "/Users/bilke/ent/vislab-control",
-			"folder_exclude_patterns": ["docs", "tmp"]
+			"folder_exclude_patterns": ["docs", "tmp", "vendor"]
 		}
 	]
 }

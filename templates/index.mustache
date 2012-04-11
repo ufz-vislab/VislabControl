@@ -1,0 +1,82 @@
+<div class="page-header">
+	<h1><a href="/">Vislab-Control</a></h1>
+</div>
+
+<div class="row">
+	<div class="span6">
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Ip</th>
+					<th>Status</th>
+					<th>Commands</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#array}}
+					<tr>
+						<td>{{ip}}</td>
+						<td><img src="/img/{{status}}.png" /></td>
+						<td>
+							<a class="btn btn-primary" href="/start/{{ip}}">Start</a>
+							<a class="btn btn-danger" href="/stop/{{ip}}">Stop</a>
+							<!-- <a class="btn btn-warning" href="/restart/{{ip}}">Restart</a> -->
+						</td>
+					</tr>
+				{{/array}}
+			</tbody>
+		</table>
+	</div>
+
+	<div class="span6">
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Nodeset</th>
+					<th>Commands</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#nodeset_array}}
+					<tr>
+						<td>{{name}}</td>
+						<td>
+							<a class="btn btn-primary" href="/nodeset/start/{{name}}">Start</a>
+							<a class="btn btn-danger" href="/nodeset/stop/{{name}}">Stop</a>
+							<!-- <a class="btn btn-warning" href="/nodeset/restart/{{name}}">Restart</a> -->
+						</td>
+					</tr>
+				{{/nodeset_array}}
+			</tbody>
+		</table>
+		<table class="table table-bordered table-striped">
+			<tbody>
+				<tr>
+					<td>Tracking</td>
+					<td>
+						<a class="btn btn-primary" href="/tracking/start">Start</a>
+						<a class="btn btn-danger" href="/tracking/stop">Stop</a>
+					</td>
+					<td>
+						{{#tracking_configs}}
+						<a class="btn btn-primary" href="/tracking/config/{{name}}">Config: {{name}}</a>
+						{{/tracking_configs}}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table table-bordered table-striped">
+			<tbody>
+				<tr>
+					<td>VRED</td>
+					<td>
+						<a class="btn btn-primary" href="/vred/2.5">2.5</a>
+						<a class="btn btn-danger" href="/vred/5.04-x64">5.04-x64</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class='notiftions top-left'></div>
