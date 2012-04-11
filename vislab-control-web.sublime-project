@@ -1,0 +1,9 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/bilke/ent/vislab-control",
+			"folder_exclude_patterns": ["docs", "tmp"]
+		}
+	]
+}
