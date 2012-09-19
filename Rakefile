@@ -13,5 +13,6 @@ end
 
 desc "Deploys to the server via Capistrano"
 task :deploy do
+	system "bundle exec cap deploy:upload FILES='config/config.yml'"
 	system "bundle exec cap deploy"
 end
